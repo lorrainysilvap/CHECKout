@@ -1,4 +1,4 @@
-"""Diagnósticos da CHECKout (Seção 5.5 do artigo).
+"""Diagnósticos da CHECKout.
 
 Formato: Erro <fase> no arquivo <arquivo>, linha L, coluna C: <descrição>
          Aviso no arquivo <arquivo>, linha L, coluna C: <descrição>
