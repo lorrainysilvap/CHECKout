@@ -11,7 +11,7 @@ Python 3.8 ou superior.
 
 ```bash
 python checkout.py exemplos/europa.checkout           # valida e imprime a saída ou os diagnósticos
-python checkout.py --ast exemplos/europa.checkout     # imprime a AST em JSON (Seção 4.1)
+python checkout.py --ast exemplos/europa.checkout     # imprime a AST em JSON
 python checkout.py --tokens exemplos/europa.checkout  # imprime os tokens (léxico)
 ```
 
@@ -113,9 +113,7 @@ bloco          = "{", { "imprimir", texto, ";" }, "}" ;
 python testes/rodar_testes.py
 ```
 
-Roda os 55 casos de `testes/casos/` num único comando (os 38 da matriz da Seção 6.1
-do artigo e 17 casos para expressões, `se`/`senao` e as regras R11 e R12), além dos
-critérios de aceite da Seção 6.3 (48 tokens em V1 e AST idêntica à da Seção 4.1).
+Roda os 55 casos de `testes/casos/` num único comando e 17 casos para expressões, `se`/`senao` e as regras R11 e R12, além dos critérios de aceite (48 tokens em V1 e AST).
 Gera `testes/resultados.md` (tabelas para a seção de Avaliação) e
 `testes/resultados.csv` (resultado caso a caso).
 
@@ -127,44 +125,16 @@ do artigo e da especificação das extensões, não copiadas da saída do progra
 ```
 checkout.py              interface de linha de comando
 checkout/
-  lexico.py              analisador léxico (Seção 3.1 e 5.1)
-  sintatico.py           analisador sintático descendente recursivo (3.2 e 5.2)
-  ast.py                 nós da AST com posição (4.1)
-  semantico.py           regras R1 a R12 em duas passagens (3.4 e 5.3)
-  compilador.py          junta as fases e formata a saída (4.2 e 5.5)
+  lexico.py              analisador léxico 
+  sintatico.py           analisador sintático descendente recursivo 
+  ast.py                 nós da AST com posição
+  semantico.py           regras R1 a R12 em duas passagens 
+  compilador.py          junta as fases e formata a saída 
   erros.py               formato dos diagnósticos
 exemplos/                quatro programas de demonstração (três válidos, um rejeitado)
 testes/
   casos/                 55 pares .checkout / .esperado
   casos.csv              descrição de cada caso
-  V1.ast.esperado.json   AST da Seção 4.1
+  V1.ast.esperado.json   AST 
   rodar_testes.py        suíte de regressão
 ```
-
-## Decisões de implementação não fixadas pelo artigo
-
-- **Saída com avisos:** um programa com avisos e sem erros imprime os avisos e,
-  em seguida, a saída normal (caso W1: subtotal 0.00, saldo igual ao orçamento).
-- **Código das regras nas mensagens:** as mensagens semânticas começam com o código
-  da regra (`R1:`, `R8:` ...), como na matriz de testes.
-- **Cascata de erros:** cidades com data inexistente (R1) ou saída antes da chegada (R2)
-  ficam fora de R5, R6 e R10; uma cidade com nome repetido (R3) não entra na tabela de
-  símbolos. Se houver erro de moeda (R8) ou de tipo (R11/R12) no orçamento ou num custo,
-  não se calcula subtotal, saldo nem R9.
-- **Moeda malformada (R8):** só a moeda da viagem é checada pela forma; os valores em
-  dinheiro do orçamento, dos custos e das condições são comparados com ela.
-- **R6:** cada cidade é comparada com a de maior saída entre as anteriores (na ordem de
-  chegada), o que também detecta sobreposição com cidades não adjacentes.
-- **R10:** o trecho precisa ir da cidade anterior para a seguinte (direção importa).
-- **V6:** as datas usadas foram Lisboa 2028-02-29 a 2028-03-02 e Madri 2028-03-02 a 2028-03-04.
-- **Expressões:** só existem `+` e `*`. Não há subtração nem divisão, o que evita valores
-  negativos e divisão por zero. Números puros são guardados em centésimos (`1.50` = 150);
-  na multiplicação o resultado é arredondado ao centavo (meio para cima).
-- **`se`/`senao`:** os blocos são avaliados depois do cálculo do saldo, na ordem em que
-  aparecem no arquivo, independentemente da posição entre cidades e trechos. Só rodam
-  se o programa não tiver erros; o texto de `imprimir` sai depois do saldo.
-- **Escopo:** há um único escopo global para os nomes de cidade (tabela de símbolos).
-  Os nomes `saldo` e `subtotal` são pré-definidos e visíveis apenas dentro da condição
-  de um `se`.
-- **Formato dos diagnósticos:** passou a incluir o nome do arquivo como foi digitado na
-  linha de comando (`no arquivo X, linha L, coluna C`).
