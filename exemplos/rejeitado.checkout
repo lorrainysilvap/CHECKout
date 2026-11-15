@@ -1,0 +1,19 @@
+// Programa sintaticamente correto, mas semanticamente inválido:
+// o trecho chega a Salvador antes de sair de Aracaju, e o custo está em USD.
+viagem "Bahia 2027" {
+  moeda BRL;
+  orcamento 500.00 BRL;
+  cidade "Salvador" {
+    chegada 2027-03-01;
+    saida 2027-03-04;
+  }
+  cidade "Aracaju" {
+    chegada 2027-03-04;
+    saida 2027-03-06;
+  }
+  trecho "Aracaju" -> "Salvador" {
+    transporte carro;
+    custo 80.00 USD;
+    duracao 4h30;
+  }
+}

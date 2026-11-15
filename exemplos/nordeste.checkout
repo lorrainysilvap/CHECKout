@@ -1,0 +1,27 @@
+// Roteiro de exemplo com três cidades e dois trechos (valores ilustrativos).
+viagem "Nordeste 2027" {
+  moeda BRL;
+  orcamento 1200.00 BRL;
+  cidade "Recife" {
+    chegada 2027-01-05;
+    saida 2027-01-08;
+  }
+  trecho "Recife" -> "Joao Pessoa" {
+    transporte onibus;
+    custo 89.90 BRL;
+    duracao 2h10;
+  }
+  cidade "Joao Pessoa" {
+    chegada 2027-01-08;
+    saida 2027-01-11;
+  }
+  trecho "Joao Pessoa" -> "Natal" {
+    transporte onibus_leito;
+    custo 120.00 BRL;
+    duracao 3h05;
+  }
+  cidade "Natal" {
+    chegada 2027-01-11;
+    saida 2027-01-15;
+  }
+}

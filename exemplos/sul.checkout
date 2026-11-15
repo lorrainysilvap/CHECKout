@@ -1,0 +1,38 @@
+// Roteiro pelo Sul com expressões e estrutura de controle (valores ilustrativos).
+viagem "Sul 2027" {
+  moeda BRL;
+  orcamento 2 * 400.00 BRL;          // duas pessoas, 400 reais cada
+
+  cidade "Curitiba" {
+    chegada 2027-07-01;
+    saida 2027-07-04;
+  }
+
+  cidade "Florianopolis" {
+    chegada 2027-07-04;
+    saida 2027-07-08;
+  }
+
+  cidade "Porto Alegre" {
+    chegada 2027-07-08;
+    saida 2027-07-10;
+  }
+
+  trecho "Curitiba" -> "Florianopolis" {
+    transporte onibus;
+    custo 2 * 110.00 BRL + 15.00 BRL; // duas passagens + taxa: * vem antes de +
+    duracao 5h30;
+  }
+
+  trecho "Florianopolis" -> "Porto Alegre" {
+    transporte aviao;
+    custo 2 * (149.90 BRL + 25.00 BRL); // passagem + bagagem, para cada pessoa
+    duracao 1h10;
+  }
+
+  se saldo < 200.00 BRL {
+    imprimir "Atencao: sobrou pouco dinheiro para os deslocamentos";
+  } senao {
+    imprimir "Orcamento folgado";
+  }
+}
