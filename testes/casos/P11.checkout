@@ -1,0 +1,18 @@
+// Valores ilustrativos: não são dados de viagem verificados.
+viagem "Europa 2027" {
+  moeda EUR;             // moeda de referência do roteiro
+  orcamento 2500.00 EUR; // limite para custos de deslocamento
+  cidade "Lisboa" {
+    chegada 2027-06-10;
+    saida 2027-06-13;
+  }
+  cidade "Madri" {
+    chegada 2027-06-13;
+    saida 2027-06-16;
+  }
+  trecho "Lisboa" -> "Madri" {
+    transporte trem;
+    custo (45.50 EUR + 3.00 EUR;
+    duracao 2h45; // 2 h 45 min = 165 minutos
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "tipo": "Viagem",
+  "nome": "Europa 2027",
+  "pos": {
+    "linha": 2,
+    "coluna": 1
+  },
+  "moeda": {
+    "codigo": "EUR",
+    "pos": {
+      "linha": 3,
+      "coluna": 9
+    }
+  },
+  "orcamento": {
+    "tipo": "Dinheiro",
+    "centavos": 250000,
+    "moeda": "EUR",
+    "pos": {
+      "linha": 4,
+      "coluna": 13
+    },
+    "posMoeda": {
+      "linha": 4,
+      "coluna": 21
+    }
+  },
+  "cidades": [
+    {
+      "tipo": "Cidade",
+      "nome": "Lisboa",
+      "pos": {
+        "linha": 5,
+        "coluna": 10
+      },
+      "chegada": {
+        "tipo": "Data",
+        "valor": "2027-06-10",
+        "pos": {
+          "linha": 6,
+          "coluna": 13
+        }
+      },
+      "saida": {
+        "tipo": "Data",
+        "valor": "2027-06-13",
+        "pos": {
+          "linha": 7,
+          "coluna": 11
+        }
+      }
+    },
+    {
+      "tipo": "Cidade",
+      "nome": "Madri",
+      "pos": {
+        "linha": 9,
+        "coluna": 10
+      },
+      "chegada": {
+        "tipo": "Data",
+        "valor": "2027-06-13",
+        "pos": {
+          "linha": 10,
+          "coluna": 13
+        }
+      },
+      "saida": {
+        "tipo": "Data",
+        "valor": "2027-06-16",
+        "pos": {
+          "linha": 11,
+          "coluna": 11
+        }
+      }
+    }
+  ],
+  "trechos": [
+    {
+      "tipo": "Trecho",
+      "pos": {
+        "linha": 13,
+        "coluna": 3
+      },
+      "origem": {
+        "nome": "Lisboa",
+        "pos": {
+          "linha": 13,
+          "coluna": 10
+        }
+      },
+      "destino": {
+        "nome": "Madri",
+        "pos": {
+          "linha": 13,
+          "coluna": 22
+        }
+      },
+      "transporte": "trem",
+      "custo": {
+        "tipo": "Dinheiro",
+        "centavos": 4550,
+        "moeda": "EUR",
+        "pos": {
+          "linha": 15,
+          "coluna": 11
+        },
+        "posMoeda": {
+          "linha": 15,
+          "coluna": 17
+        }
+      },
+      "duracao": {
+        "tipo": "Duracao",
+        "texto": "2h45",
+        "minutos": 165,
+        "pos": {
+          "linha": 16,
+          "coluna": 13
+        }
+      }
+    }
+  ]
+}

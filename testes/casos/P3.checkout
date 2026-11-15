@@ -1,0 +1,4 @@
+viagem "Europa 2027" {
+  moeda EUR;
+  orcamento 2500.00 EUR;
+}

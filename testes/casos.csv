@@ -1,0 +1,56 @@
+id;descricao
+V1;nenhuma alteração
+V2;"nome ""Europa // 2027"""
+V3;"nome ""Férias \""Europa\"""""
+V4;// fim após o último }, sem quebra de linha final
+V5;trecho movido para entre as duas cidades
+V6;datas trocadas para 2028-02-29 a 2028-03-04 (ano bissexto)
+V7;quebras de linha \r\n e custo 45,50 na linha 15
+W1;trecho removido
+L1;"cidade ""Lisboa {  (aspas não fechadas)"
+L2;"arquivo contendo só viagem ""Europa"
+L3;custo 45,50
+L4;chegada 2027-6-10
+L5;orcamento 2500.0
+L6;custo .50
+L7;custo 045.50
+L8;custo -45.50
+L9;custo 45.234
+L10;duracao 2h5
+L11;"nome ""Europa\n2027"""
+P1;"sem ; após moeda EUR"
+P2;sem o } final
+P3;programa com moeda e orçamento, sem cidade
+P4;orcamento declarado antes de moeda
+P5;"transporte trecho;"
+P6;"duracao ""2h45""; (forma antiga)"
+P7;em Lisboa, saida antes de chegada
+S1;chegada 2027-02-30
+S2;chegada 2027-02-29 (2027 não é bissexto)
+S3;saída de Lisboa 2027-06-09
+S4;"trecho para ""Porto"""
+S5;custo em USD
+S6;orçamento 40.00 EUR
+S7;duração 2h75
+S8;duração 0h00
+S9;"segunda cidade renomeada para ""Lisboa"""
+S10;"trecho invertido para ""Madri"" -> ""Lisboa"""
+S11;chegada a Madri 2027-06-12
+S12;moeda Eur em todo o arquivo
+V8;custo 2 * 45.50 EUR + 3.00 EUR e orçamento 2 * 1000.00 EUR + 500.00 EUR (precedência)
+V9;custo 2 * (45.50 EUR + 3.00 EUR) (parênteses)
+V10;dois blocos se/senao: um verdadeiro e um falso
+V11;se subtotal >= 1.50 * 30.00 EUR + 0.50 EUR (precedência na condição) e se sem senao falso
+L12;custo 45.50 EUR - 5.00 EUR (subtração não existe)
+P8;custo 2 * ; (falta operando)
+P9;se sem { antes de imprimir
+P10;se sem comparador
+P11;custo (45.50 EUR + 3.00 EUR; (falta ')')
+S13;custo 45.50 EUR * 2.00 EUR
+S14;custo 45.50 EUR + 2
+S15;orcamento 2500.00 (sem moeda)
+S16;se saldo < 100 (dinheiro com número)
+S17;se total < 100.00 EUR (nome não declarado)
+S18;custo saldo (nome fora do se)
+S19;se saldo < 100.00 USD
+S20;custo 2 * 45.50 EUR + 3.00 USD
