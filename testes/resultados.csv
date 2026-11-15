@@ -1,56 +1,56 @@
 id;grupo;descricao;deve_rejeitar;rejeitou;fase_esperada;fase_obtida;pos_esperada;pos_obtida;diag_esperados;diag_obtidos;status;tempo_ms
-V1;V;nenhuma alteração;False;False;-;-;-;-;0;0;conforme;0.329
-V2;V;"nome ""Europa // 2027""";False;False;-;-;-;-;0;0;conforme;0.251
-V3;V;"nome ""Férias \""Europa\""""";False;False;-;-;-;-;0;0;conforme;0.234
-V4;V;// fim após o último }, sem quebra de linha final;False;False;-;-;-;-;0;0;conforme;0.226
-V5;V;trecho movido para entre as duas cidades;False;False;-;-;-;-;0;0;conforme;0.219
-V6;V;datas trocadas para 2028-02-29 a 2028-03-04 (ano bissexto);False;False;-;-;-;-;0;0;conforme;0.227
-V7;L;quebras de linha \r\n e custo 45,50 na linha 15;True;True;léxico;léxico;15:13;15:13;1;1;conforme;0.173
-V8;V;custo 2 * 45.50 EUR + 3.00 EUR e orçamento 2 * 1000.00 EUR + 500.00 EUR (precedência);False;False;-;-;-;-;0;0;conforme;0.258
-V9;V;custo 2 * (45.50 EUR + 3.00 EUR) (parênteses);False;False;-;-;-;-;0;0;conforme;0.237
-V10;V;dois blocos se/senao: um verdadeiro e um falso;False;False;-;-;-;-;0;0;conforme;0.354
-V11;V;se subtotal >= 1.50 * 30.00 EUR + 0.50 EUR (precedência na condição) e se sem senao falso;False;False;-;-;-;-;0;0;conforme;0.361
-W1;W;trecho removido;False;False;-;-;-;-;1;1;conforme;0.163
-L1;L;"cidade ""Lisboa {  (aspas não fechadas)";True;True;léxico;léxico;5:10;5:10;1;1;conforme;0.084
-L2;L;"arquivo contendo só viagem ""Europa";True;True;léxico;léxico;1:8;1:8;1;1;conforme;0.014
-L3;L;custo 45,50;True;True;léxico;léxico;15:13;15:13;1;1;conforme;0.164
-L4;L;chegada 2027-6-10;True;True;léxico;léxico;6:13;6:13;1;1;conforme;0.108
-L5;L;orcamento 2500.0;True;True;léxico;léxico;4:13;4:13;1;1;conforme;0.055
-L6;L;custo .50;True;True;léxico;léxico;15:11;15:11;1;1;conforme;0.148
-L7;L;custo 045.50;True;True;léxico;léxico;15:11;15:11;1;1;conforme;0.153
-L8;L;custo -45.50;True;True;léxico;léxico;15:11;15:11;1;1;conforme;0.148
-L9;L;custo 45.234;True;True;léxico;léxico;15:11;15:11;1;1;conforme;0.153
-L10;L;duracao 2h5;True;True;léxico;léxico;16:13;16:13;1;1;conforme;0.191
-L11;L;"nome ""Europa\n2027""";True;True;léxico;léxico;2:15;2:15;1;1;conforme;0.028
-L12;L;custo 45.50 EUR - 5.00 EUR (subtração não existe);True;True;léxico;léxico;15:21;15:21;1;1;conforme;0.159
-P1;P;"sem ; após moeda EUR";True;True;sintático;sintático;4:3;4:3;1;1;conforme;0.182
-P2;P;sem o } final;True;True;sintático;sintático;18:1;18:1;1;1;conforme;0.199
-P3;P;programa com moeda e orçamento, sem cidade;True;True;sintático;sintático;4:1;4:1;1;1;conforme;0.044
-P4;P;orcamento declarado antes de moeda;True;True;sintático;sintático;2:3;2:3;1;1;conforme;0.166
-P5;P;"transporte trecho;";True;True;sintático;sintático;14:16;14:16;1;1;conforme;0.201
-P6;P;"duracao ""2h45""; (forma antiga)";True;True;sintático;sintático;16:13;16:13;1;1;conforme;0.225
-P7;P;em Lisboa, saida antes de chegada;True;True;sintático;sintático;6:5;6:5;1;1;conforme;0.219
-P8;P;custo 2 * ;True;True;sintático;sintático;15:15;15:15;1;1;conforme;0.251
-P9;P;se sem { antes de imprimir;True;True;sintático;sintático;18:25;18:25;1;1;conforme;0.229
-P10;P;se sem comparador;True;True;sintático;sintático;18:12;18:12;1;1;conforme;0.216
-P11;P;custo (45.50 EUR + 3.00 EUR;True;True;sintático;sintático;15:32;15:32;1;1;conforme;0.206
-S1;S;chegada 2027-02-30;True;True;semântico;semântico;6:13;6:13;1;1;conforme;0.250
-S2;S;chegada 2027-02-29 (2027 não é bissexto);True;True;semântico;semântico;6:13;6:13;1;1;conforme;0.215
-S3;S;saída de Lisboa 2027-06-09;True;True;semântico;semântico;7:11;7:11;1;1;conforme;0.212
-S4;S;"trecho para ""Porto""";True;True;semântico;semântico;13:22;13:22;2;2;conforme;0.269
-S5;S;custo em USD;True;True;semântico;semântico;15:17;15:17;1;1;conforme;0.254
-S6;S;orçamento 40.00 EUR;True;True;semântico;semântico;4:13;4:13;1;1;conforme;0.229
-S7;S;duração 2h75;True;True;semântico;semântico;16:13;16:13;1;1;conforme;0.221
-S8;S;duração 0h00;True;True;semântico;semântico;16:13;16:13;1;1;conforme;0.226
-S9;S;"segunda cidade renomeada para ""Lisboa""";True;True;semântico;semântico;9:10;9:10;2;2;conforme;0.265
-S10;S;"trecho invertido para ""Madri"" -> ""Lisboa""";True;True;semântico;semântico;13:21;13:21;2;2;conforme;0.214
-S11;S;chegada a Madri 2027-06-12;True;True;semântico;semântico;10:13;10:13;2;2;conforme;0.211
-S12;S;moeda Eur em todo o arquivo;True;True;semântico;semântico;3:9;3:9;1;1;conforme;0.215
-S13;S;custo 45.50 EUR * 2.00 EUR;True;True;semântico;semântico;15:21;15:21;1;1;conforme;0.224
-S14;S;custo 45.50 EUR + 2;True;True;semântico;semântico;15:21;15:21;1;1;conforme;0.217
-S15;S;orcamento 2500.00 (sem moeda);True;True;semântico;semântico;4:13;4:13;1;1;conforme;0.196
-S16;S;se saldo < 100 (dinheiro com número);True;True;semântico;semântico;18:12;18:12;1;1;conforme;0.326
-S17;S;se total < 100.00 EUR (nome não declarado);True;True;semântico;semântico;18:6;18:6;1;1;conforme;0.360
-S18;S;custo saldo (nome fora do se);True;True;semântico;semântico;15:11;15:11;1;1;conforme;0.342
-S19;S;se saldo < 100.00 USD;True;True;semântico;semântico;18:21;18:21;1;1;conforme;0.413
-S20;S;custo 2 * 45.50 EUR + 3.00 USD;True;True;semântico;semântico;15:32;15:32;1;1;conforme;0.237
+V1;V;nenhuma alteração;False;False;-;-;-;-;0;0;conforme;0.999
+V2;V;"nome ""Europa // 2027""";False;False;-;-;-;-;0;0;conforme;0.612
+V3;V;"nome ""Férias \""Europa\""""";False;False;-;-;-;-;0;0;conforme;0.551
+V4;V;// fim após o último }, sem quebra de linha final;False;False;-;-;-;-;0;0;conforme;0.510
+V5;V;trecho movido para entre as duas cidades;False;False;-;-;-;-;0;0;conforme;0.518
+V6;V;datas trocadas para 2028-02-29 a 2028-03-04 (ano bissexto);False;False;-;-;-;-;0;0;conforme;0.707
+V7;L;quebras de linha \r\n e custo 45,50 na linha 15;True;True;léxico;léxico;15:13;15:13;1;1;conforme;0.487
+V8;V;custo 2 * 45.50 EUR + 3.00 EUR e orçamento 2 * 1000.00 EUR + 500.00 EUR (precedência);False;False;-;-;-;-;0;0;conforme;0.544
+V9;V;custo 2 * (45.50 EUR + 3.00 EUR) (parênteses);False;False;-;-;-;-;0;0;conforme;1.124
+V10;V;dois blocos se/senao: um verdadeiro e um falso;False;False;-;-;-;-;0;0;conforme;0.900
+V11;V;se subtotal >= 1.50 * 30.00 EUR + 0.50 EUR (precedência na condição) e se sem senao falso;False;False;-;-;-;-;0;0;conforme;0.664
+W1;W;trecho removido;False;False;-;-;-;-;1;1;conforme;0.507
+L1;L;"cidade ""Lisboa {  (aspas não fechadas)";True;True;léxico;léxico;5:10;5:10;1;1;conforme;0.483
+L2;L;"arquivo contendo só viagem ""Europa";True;True;léxico;léxico;1:8;1:8;1;1;conforme;0.231
+L3;L;custo 45,50;True;True;léxico;léxico;15:13;15:13;1;1;conforme;0.351
+L4;L;chegada 2027-6-10;True;True;léxico;léxico;6:13;6:13;1;1;conforme;0.573
+L5;L;orcamento 2500.0;True;True;léxico;léxico;4:13;4:13;1;1;conforme;0.198
+L6;L;custo .50;True;True;léxico;léxico;15:11;15:11;1;1;conforme;0.725
+L7;L;custo 045.50;True;True;léxico;léxico;15:11;15:11;1;1;conforme;1.429
+L8;L;custo -45.50;True;True;léxico;léxico;15:11;15:11;1;1;conforme;0.867
+L9;L;custo 45.234;True;True;léxico;léxico;15:11;15:11;1;1;conforme;2.172
+L10;L;duracao 2h5;True;True;léxico;léxico;16:13;16:13;1;1;conforme;2.032
+L11;L;"nome ""Europa\n2027""";True;True;léxico;léxico;2:15;2:15;1;1;conforme;0.366
+L12;L;custo 45.50 EUR - 5.00 EUR (subtração não existe);True;True;léxico;léxico;15:21;15:21;1;1;conforme;1.253
+P1;P;"sem ; após moeda EUR";True;True;sintático;sintático;4:3;4:3;1;1;conforme;1.040
+P2;P;sem o } final;True;True;sintático;sintático;18:1;18:1;1;1;conforme;1.415
+P3;P;programa com moeda e orçamento, sem cidade;True;True;sintático;sintático;4:1;4:1;1;1;conforme;0.272
+P4;P;orcamento declarado antes de moeda;True;True;sintático;sintático;2:3;2:3;1;1;conforme;0.753
+P5;P;"transporte trecho;";True;True;sintático;sintático;14:16;14:16;1;1;conforme;4.699
+P6;P;"duracao ""2h45""; (forma antiga)";True;True;sintático;sintático;16:13;16:13;1;1;conforme;0.889
+P7;P;em Lisboa, saida antes de chegada;True;True;sintático;sintático;6:5;6:5;1;1;conforme;0.482
+P8;P;custo 2 * ;True;True;sintático;sintático;15:15;15:15;1;1;conforme;0.946
+P9;P;se sem { antes de imprimir;True;True;sintático;sintático;18:25;18:25;1;1;conforme;1.041
+P10;P;se sem comparador;True;True;sintático;sintático;18:12;18:12;1;1;conforme;0.466
+P11;P;custo (45.50 EUR + 3.00 EUR;True;True;sintático;sintático;15:32;15:32;1;1;conforme;0.563
+S1;S;chegada 2027-02-30;True;True;semântico;semântico;6:13;6:13;1;1;conforme;0.735
+S2;S;chegada 2027-02-29 (2027 não é bissexto);True;True;semântico;semântico;6:13;6:13;1;1;conforme;0.958
+S3;S;saída de Lisboa 2027-06-09;True;True;semântico;semântico;7:11;7:11;1;1;conforme;0.503
+S4;S;"trecho para ""Porto""";True;True;semântico;semântico;13:22;13:22;2;2;conforme;0.644
+S5;S;custo em USD;True;True;semântico;semântico;15:17;15:17;1;1;conforme;0.635
+S6;S;orçamento 40.00 EUR;True;True;semântico;semântico;4:13;4:13;1;1;conforme;0.635
+S7;S;duração 2h75;True;True;semântico;semântico;16:13;16:13;1;1;conforme;0.638
+S8;S;duração 0h00;True;True;semântico;semântico;16:13;16:13;1;1;conforme;0.439
+S9;S;"segunda cidade renomeada para ""Lisboa""";True;True;semântico;semântico;9:10;9:10;2;2;conforme;0.438
+S10;S;"trecho invertido para ""Madri"" -> ""Lisboa""";True;True;semântico;semântico;13:21;13:21;2;2;conforme;0.433
+S11;S;chegada a Madri 2027-06-12;True;True;semântico;semântico;10:13;10:13;2;2;conforme;0.861
+S12;S;moeda Eur em todo o arquivo;True;True;semântico;semântico;3:9;3:9;1;1;conforme;0.443
+S13;S;custo 45.50 EUR * 2.00 EUR;True;True;semântico;semântico;15:21;15:21;1;1;conforme;0.698
+S14;S;custo 45.50 EUR + 2;True;True;semântico;semântico;15:21;15:21;1;1;conforme;0.545
+S15;S;orcamento 2500.00 (sem moeda);True;True;semântico;semântico;4:13;4:13;1;1;conforme;1.108
+S16;S;se saldo < 100 (dinheiro com número);True;True;semântico;semântico;18:12;18:12;1;1;conforme;0.578
+S17;S;se total < 100.00 EUR (nome não declarado);True;True;semântico;semântico;18:6;18:6;1;1;conforme;0.502
+S18;S;custo saldo (nome fora do se);True;True;semântico;semântico;15:11;15:11;1;1;conforme;0.730
+S19;S;se saldo < 100.00 USD;True;True;semântico;semântico;18:21;18:21;1;1;conforme;0.685
+S20;S;custo 2 * 45.50 EUR + 3.00 USD;True;True;semântico;semântico;15:32;15:32;1;1;conforme;0.571

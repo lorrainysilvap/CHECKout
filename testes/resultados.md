@@ -1,6 +1,6 @@
 # Resultados da suíte de testes da CHECKout
 
-Execução: 2026-11-14 19:06 · Python 3.13.18 · Linux
+Execução: 2026-11-15 20:37 · Python 3.11.9 · Windows
 
 ## Tabela 1 — Resumo por grupo
 
@@ -23,8 +23,8 @@ Execução: 2026-11-14 19:06 · Python 3.13.18 · Linux
 | Diagnóstico e posição exatos | 44/44 (100.0%) |
 | Escapes (erro aceito como válido) | 0 |
 | Falsos positivos (controle rejeitado) | 0/11 |
-| Tempo total da suíte | 11.7 ms |
-| Tempo médio por caso | 0.21 ms |
+| Tempo total da suíte | 44.2 ms |
+| Tempo médio por caso | 0.80 ms |
 
 ## Tabela 3 — Regras semânticas exercitadas
 
